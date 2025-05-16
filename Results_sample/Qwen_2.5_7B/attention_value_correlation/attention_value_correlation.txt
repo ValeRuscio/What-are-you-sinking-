@@ -1,0 +1,336 @@
+ATTENTION-VALUE CORRELATION ANALYSIS FOR Qwen/Qwen2.5-7B
+
+Based on 500 text samples
+
+OVERALL STATISTICS
+====================
+
+Attention Distribution Entropy:
+  Mean: 1.4513
+  Median: 1.4304
+  Std Dev: 0.5227
+  Range: 0.0000 to 3.1395
+  Sample Size: 14000
+  Statistical Significance: * SIGNIFICANT *
+  p-value: 0.000000 (very strong (p<0.001))
+  t-statistic: 328.5127
+
+Value Transformation Magnitude:
+  Mean: 16.1056
+  Median: 3.7148
+  Std Dev: 41.5588
+  Range: 1.3996 to 313.4238
+  Sample Size: 14000
+  Statistical Significance: * SIGNIFICANT *
+  p-value: 0.000000 (very strong (p<0.001))
+  t-statistic: 45.8525
+
+Geometric-Semantic Alignment:
+  Mean: -0.0405
+  Median: -0.0150
+  Std Dev: 0.1214
+  Range: -0.6033 to 0.3401
+  Sample Size: 14000
+  Statistical Significance: * SIGNIFICANT *
+  p-value: 0.000000 (very strong (p<0.001))
+  t-statistic: -39.4575
+
+Entropy-Magnitude Correlation:
+  Mean: -0.2294
+  Median: -0.3789
+  Std Dev: 0.3837
+  Range: -0.9370 to 0.9232
+  Sample Size: 14000
+  Statistical Significance: * SIGNIFICANT *
+  p-value: 0.000000 (very strong (p<0.001))
+  t-statistic: -70.7427
+
+PCA Component Correlation:
+  Mean: -0.0940
+  Median: -0.0979
+  Std Dev: 0.2143
+  Range: -0.8416 to 0.6975
+  Sample Size: 14000
+  Statistical Significance: * SIGNIFICANT *
+  p-value: 0.000000 (very strong (p<0.001))
+  t-statistic: -51.9256
+
+Layer Evolution Patterns (with Statistical Significance):
+  Attention Distribution Entropy:
+    Pattern: Decreasing
+    Spearman Rank Correlation: -0.5189 (* SIGNIFICANT *)
+    p-value: 0.004667 (strong (p<0.01))
+    Pearson Linear Correlation: -0.6341 (* SIGNIFICANT *)
+    p-value: 0.000291 (very strong (p<0.001))
+    Sample Size: 28
+  Value Transformation Magnitude:
+    Pattern: Mixed
+    Spearman Rank Correlation: 0.1418 (not significant)
+    p-value: 0.471782 (not significant (p≥0.1))
+    Pearson Linear Correlation: 0.3209 (not significant)
+    p-value: 0.095913 (marginal (p<0.1))
+    Sample Size: 28
+  Geometric-Semantic Alignment:
+    Pattern: Decreasing
+    Spearman Rank Correlation: -0.6897 (* SIGNIFICANT *)
+    p-value: 0.000049 (very strong (p<0.001))
+    Pearson Linear Correlation: -0.7099 (* SIGNIFICANT *)
+    p-value: 0.000023 (very strong (p<0.001))
+    Sample Size: 28
+  Entropy-Magnitude Correlation:
+    Pattern: Increasing
+    Spearman Rank Correlation: 0.6929 (* SIGNIFICANT *)
+    p-value: 0.000044 (very strong (p<0.001))
+    Pearson Linear Correlation: 0.5462 (* SIGNIFICANT *)
+    p-value: 0.002639 (strong (p<0.01))
+    Sample Size: 28
+  PCA Component Correlation:
+    Pattern: Mixed
+    Spearman Rank Correlation: 0.0268 (not significant)
+    p-value: 0.892239 (not significant (p≥0.1))
+    Pearson Linear Correlation: 0.0761 (not significant)
+    p-value: 0.700322 (not significant (p≥0.1))
+    Sample Size: 28
+
+CROSS-LAYER STATISTICAL TESTS:
+==============================
+
+Attention Distribution Entropy (First vs. Last Layer):
+  First Layer Mean: 2.2183
+  Last Layer Mean: 0.1097
+  Difference: -2.1086 (decrease)
+  Statistical Significance: * SIGNIFICANT *
+  p-value: 0.000000 (very strong (p<0.001))
+  t-statistic: 142.2225
+  Sample Sizes: 500 (first), 500 (last)
+
+Value Transformation Magnitude (First vs. Last Layer):
+  First Layer Mean: 14.9950
+  Last Layer Mean: 221.3231
+  Difference: 206.3281 (increase)
+  Statistical Significance: * SIGNIFICANT *
+  p-value: 0.000000 (very strong (p<0.001))
+  t-statistic: -172.3345
+  Sample Sizes: 500 (first), 500 (last)
+
+Geometric-Semantic Alignment (First vs. Last Layer):
+  First Layer Mean: 0.0575
+  Last Layer Mean: 0.0000
+  Difference: -0.0575 (decrease)
+  Statistical Significance: * SIGNIFICANT *
+  p-value: 0.000000 (very strong (p<0.001))
+  t-statistic: 43.8618
+  Sample Sizes: 500 (first), 500 (last)
+
+Entropy-Magnitude Correlation (First vs. Last Layer):
+  First Layer Mean: -0.7000
+  Last Layer Mean: -0.0472
+  Difference: 0.6527 (increase)
+  Statistical Significance: * SIGNIFICANT *
+  p-value: 0.000000 (very strong (p<0.001))
+  t-statistic: -139.9144
+  Sample Sizes: 500 (first), 500 (last)
+
+PCA Component Correlation (First vs. Last Layer):
+  First Layer Mean: -0.0036
+  Last Layer Mean: 0.0114
+  Difference: 0.0151 (increase)
+  Statistical Significance: * SIGNIFICANT *
+  p-value: 0.003026 (strong (p<0.01))
+  t-statistic: -2.9745
+  Sample Sizes: 500 (first), 500 (last)
+
+LAYER-SPECIFIC STATISTICS (select layers):
+
+Layer 0: FIRST LAYER
+  Attention Distribution Entropy: 2.2183
+    Significance: * SIGNIFICANT * (p=0.000000, very strong (p<0.001))
+  Value Transformation Magnitude: 14.9950
+    Significance: * SIGNIFICANT * (p=0.000000, very strong (p<0.001))
+  Geometric-Semantic Alignment: 0.0575
+    Significance: * SIGNIFICANT * (p=0.000000, very strong (p<0.001))
+  Entropy-Magnitude Correlation: -0.7000
+    Significance: * SIGNIFICANT * (p=0.000000, very strong (p<0.001))
+  PCA Component Correlation: -0.0036
+    Significance: not significant (p=0.411141, not significant (p≥0.1))
+
+  Correlation Analysis (with Statistical Significance):
+    Attention Distribution Entropy vs. Value Transformation Magnitude:
+      Pearson r: -0.7660 (* SIGNIFICANT *)
+      p-value: 0.000000 (very strong (p<0.001))
+      Spearman rho: -0.7514 (* SIGNIFICANT *)
+      p-value: 0.000000 (very strong (p<0.001))
+      Sample Size: 500
+    Attention Distribution Entropy vs. Geometric-Semantic Alignment:
+      Pearson r: 0.0455 (not significant)
+      p-value: 0.309567 (not significant (p≥0.1))
+      Spearman rho: 0.0280 (not significant)
+      p-value: 0.532885 (not significant (p≥0.1))
+      Sample Size: 500
+    Attention Distribution Entropy vs. Entropy-Magnitude Correlation:
+      Pearson r: 0.6993 (* SIGNIFICANT *)
+      p-value: 0.000000 (very strong (p<0.001))
+      Spearman rho: 0.7144 (* SIGNIFICANT *)
+      p-value: 0.000000 (very strong (p<0.001))
+      Sample Size: 500
+    Value Transformation Magnitude vs. Geometric-Semantic Alignment:
+      Pearson r: -0.1214 (* SIGNIFICANT *)
+      p-value: 0.006570 (strong (p<0.01))
+      Spearman rho: -0.0602 (not significant)
+      p-value: 0.179155 (not significant (p≥0.1))
+      Sample Size: 500
+    Value Transformation Magnitude vs. Entropy-Magnitude Correlation:
+      Pearson r: -0.5514 (* SIGNIFICANT *)
+      p-value: 0.000000 (very strong (p<0.001))
+      Spearman rho: -0.5715 (* SIGNIFICANT *)
+      p-value: 0.000000 (very strong (p<0.001))
+      Sample Size: 500
+    Geometric-Semantic Alignment vs. Entropy-Magnitude Correlation:
+      Pearson r: 0.1311 (* SIGNIFICANT *)
+      p-value: 0.003309 (strong (p<0.01))
+      Spearman rho: 0.1241 (* SIGNIFICANT *)
+      p-value: 0.005453 (strong (p<0.01))
+      Sample Size: 500
+
+Layer 7: QUARTER-DEPTH LAYER
+  Attention Distribution Entropy: 1.5957
+    Significance: * SIGNIFICANT * (p=0.000000, very strong (p<0.001))
+  Value Transformation Magnitude: 2.8056
+    Significance: * SIGNIFICANT * (p=0.000000, very strong (p<0.001))
+  Geometric-Semantic Alignment: 0.0293
+    Significance: * SIGNIFICANT * (p=0.000000, very strong (p<0.001))
+  Entropy-Magnitude Correlation: -0.5451
+    Significance: * SIGNIFICANT * (p=0.000000, very strong (p<0.001))
+  PCA Component Correlation: -0.0698
+    Significance: * SIGNIFICANT * (p=0.000000, very strong (p<0.001))
+
+  Correlation Analysis (with Statistical Significance):
+    Attention Distribution Entropy vs. Value Transformation Magnitude:
+      Pearson r: -0.1214 (* SIGNIFICANT *)
+      p-value: 0.006587 (strong (p<0.01))
+      Spearman rho: -0.6115 (* SIGNIFICANT *)
+      p-value: 0.000000 (very strong (p<0.001))
+      Sample Size: 500
+    Attention Distribution Entropy vs. Geometric-Semantic Alignment:
+      Pearson r: 0.3153 (* SIGNIFICANT *)
+      p-value: 0.000000 (very strong (p<0.001))
+      Spearman rho: 0.2172 (* SIGNIFICANT *)
+      p-value: 0.000001 (very strong (p<0.001))
+      Sample Size: 500
+    Attention Distribution Entropy vs. Entropy-Magnitude Correlation:
+      Pearson r: 0.3721 (* SIGNIFICANT *)
+      p-value: 0.000000 (very strong (p<0.001))
+      Spearman rho: 0.3733 (* SIGNIFICANT *)
+      p-value: 0.000000 (very strong (p<0.001))
+      Sample Size: 500
+    Value Transformation Magnitude vs. Geometric-Semantic Alignment:
+      Pearson r: -0.1326 (* SIGNIFICANT *)
+      p-value: 0.002961 (strong (p<0.01))
+      Spearman rho: -0.2843 (* SIGNIFICANT *)
+      p-value: 0.000000 (very strong (p<0.001))
+      Sample Size: 500
+    Value Transformation Magnitude vs. Entropy-Magnitude Correlation:
+      Pearson r: -0.1578 (* SIGNIFICANT *)
+      p-value: 0.000397 (very strong (p<0.001))
+      Spearman rho: -0.3058 (* SIGNIFICANT *)
+      p-value: 0.000000 (very strong (p<0.001))
+      Sample Size: 500
+    Geometric-Semantic Alignment vs. Entropy-Magnitude Correlation:
+      Pearson r: 0.4140 (* SIGNIFICANT *)
+      p-value: 0.000000 (very strong (p<0.001))
+      Spearman rho: 0.3676 (* SIGNIFICANT *)
+      p-value: 0.000000 (very strong (p<0.001))
+      Sample Size: 500
+
+Layer 21: THREE-QUARTER-DEPTH LAYER
+  Attention Distribution Entropy: 1.5013
+    Significance: * SIGNIFICANT * (p=0.000000, very strong (p<0.001))
+  Value Transformation Magnitude: 5.6689
+    Significance: * SIGNIFICANT * (p=0.000000, very strong (p<0.001))
+  Geometric-Semantic Alignment: -0.0747
+    Significance: * SIGNIFICANT * (p=0.000000, very strong (p<0.001))
+  Entropy-Magnitude Correlation: 0.4291
+    Significance: * SIGNIFICANT * (p=0.000000, very strong (p<0.001))
+  PCA Component Correlation: -0.1073
+    Significance: * SIGNIFICANT * (p=0.000000, very strong (p<0.001))
+
+  Correlation Analysis (with Statistical Significance):
+    Attention Distribution Entropy vs. Value Transformation Magnitude:
+      Pearson r: 0.0918 (* SIGNIFICANT *)
+      p-value: 0.040201 (significant (p<0.05))
+      Spearman rho: 0.1081 (* SIGNIFICANT *)
+      p-value: 0.015586 (significant (p<0.05))
+      Sample Size: 500
+    Attention Distribution Entropy vs. Geometric-Semantic Alignment:
+      Pearson r: 0.3193 (* SIGNIFICANT *)
+      p-value: 0.000000 (very strong (p<0.001))
+      Spearman rho: 0.2775 (* SIGNIFICANT *)
+      p-value: 0.000000 (very strong (p<0.001))
+      Sample Size: 500
+    Attention Distribution Entropy vs. Entropy-Magnitude Correlation:
+      Pearson r: -0.0503 (not significant)
+      p-value: 0.261677 (not significant (p≥0.1))
+      Spearman rho: -0.0696 (not significant)
+      p-value: 0.120206 (not significant (p≥0.1))
+      Sample Size: 500
+    Value Transformation Magnitude vs. Geometric-Semantic Alignment:
+      Pearson r: 0.0172 (not significant)
+      p-value: 0.701757 (not significant (p≥0.1))
+      Spearman rho: 0.0889 (* SIGNIFICANT *)
+      p-value: 0.047034 (significant (p<0.05))
+      Sample Size: 500
+    Value Transformation Magnitude vs. Entropy-Magnitude Correlation:
+      Pearson r: 0.1383 (* SIGNIFICANT *)
+      p-value: 0.001933 (strong (p<0.01))
+      Spearman rho: 0.1945 (* SIGNIFICANT *)
+      p-value: 0.000012 (very strong (p<0.001))
+      Sample Size: 500
+    Geometric-Semantic Alignment vs. Entropy-Magnitude Correlation:
+      Pearson r: -0.1556 (* SIGNIFICANT *)
+      p-value: 0.000478 (very strong (p<0.001))
+      Spearman rho: -0.1195 (* SIGNIFICANT *)
+      p-value: 0.007478 (strong (p<0.01))
+      Sample Size: 500
+
+Layer 27: LAST LAYER
+  Attention Distribution Entropy: 0.1097
+    Significance: * SIGNIFICANT * (p=0.000000, very strong (p<0.001))
+  Value Transformation Magnitude: 221.3231
+    Significance: * SIGNIFICANT * (p=0.000000, very strong (p<0.001))
+  Geometric-Semantic Alignment: 0.0000
+    Significance: not significant (p=nan, not significant (p≥0.1))
+  Entropy-Magnitude Correlation: -0.0472
+    Significance: * SIGNIFICANT * (p=0.000000, very strong (p<0.001))
+  PCA Component Correlation: 0.0114
+    Significance: * SIGNIFICANT * (p=0.000004, very strong (p<0.001))
+
+  Correlation Analysis (with Statistical Significance):
+    Attention Distribution Entropy vs. Value Transformation Magnitude:
+      Pearson r: -0.5128 (* SIGNIFICANT *)
+      p-value: 0.000000 (very strong (p<0.001))
+      Spearman rho: -0.5518 (* SIGNIFICANT *)
+      p-value: 0.000000 (very strong (p<0.001))
+      Sample Size: 500
+    Attention Distribution Entropy vs. Entropy-Magnitude Correlation:
+      Pearson r: -0.8784 (* SIGNIFICANT *)
+      p-value: 0.000000 (very strong (p<0.001))
+      Spearman rho: -0.9508 (* SIGNIFICANT *)
+      p-value: 0.000000 (very strong (p<0.001))
+      Sample Size: 500
+    Value Transformation Magnitude vs. Entropy-Magnitude Correlation:
+      Pearson r: 0.4302 (* SIGNIFICANT *)
+      p-value: 0.000000 (very strong (p<0.001))
+      Spearman rho: 0.4435 (* SIGNIFICANT *)
+      p-value: 0.000000 (very strong (p<0.001))
+      Sample Size: 500
+
+KEY FINDINGS (WITH STATISTICAL SIGNIFICANCE):
+========================================
+- NEGATIVE correlation between attention patterns and semantic similarity (STATISTICALLY SIGNIFICANT, p=0.000000)
+- Tokens with FOCUSED attention patterns undergo LARGER value transformations (STATISTICALLY SIGNIFICANT, p=0.000000)
+- Attention-semantic alignment DECREASES in deeper layers (STATISTICALLY SIGNIFICANT, p=0.000049)
+- Attention Distribution Entropy DECREASES by 2.1086 from first to last layer (STATISTICALLY SIGNIFICANT, p=0.000000)
+- Value Transformation Magnitude INCREASES by 206.3281 from first to last layer (STATISTICALLY SIGNIFICANT, p=0.000000)
+- Geometric-Semantic Alignment DECREASES by 0.0575 from first to last layer (STATISTICALLY SIGNIFICANT, p=0.000000)
+- Entropy-Magnitude Correlation INCREASES by 0.6527 from first to last layer (STATISTICALLY SIGNIFICANT, p=0.000000)
+- PCA Component Correlation INCREASES by 0.0151 from first to last layer (STATISTICALLY SIGNIFICANT, p=0.003026)
