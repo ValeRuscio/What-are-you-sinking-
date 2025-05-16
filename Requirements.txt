@@ -1,0 +1,24 @@
+# Core deep learning libraries
+torch>=1.10.0
+transformers>=4.20.0
+datasets>=2.0.0
+huggingface_hub>=0.10.0
+
+# Data processing and analysis
+numpy>=1.20.0
+pandas>=1.3.0
+scipy>=1.7.0
+
+# Topological data analysis
+ripser>=0.6.0
+
+# Visualization
+matplotlib>=3.5.0
+seaborn>=0.11.0
+
+# System utilities
+psutil>=5.9.0
+tqdm>=4.62.0
+
+# Optional: For Google Colab integration
+google-colab
