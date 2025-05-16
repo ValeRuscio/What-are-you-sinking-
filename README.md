@@ -11,12 +11,19 @@ Transformer attention mechanisms develop reference frames that organize the geom
 Our analysis is implemented across eight Jupyter notebooks:
 
 topology.ipynb: Implements persistent homology and Betti number analysis to quantify the topological structure of attention networks. Calculates connected components (Betti₀) and cycles (Betti₁) using the Ripser algorithm.
+
 RMT.ipynb: Uses Random Matrix Theory to analyze how attention structures evolve during training, tracking spectral gap, participation ratio, and KL divergence from Marchenko-Pastur distribution across Pythia model checkpoints.
+
 Laplacian.ipynb: Analyzes attention graphs' Laplacian matrices (L = D - A) to assess connectivity patterns, computing metrics across multiple thresholds (0.001-0.2).
+
 Fiedler.ipynb: Focuses on algebraic connectivity (Fiedler value) to quantify graph connectedness and measure proximity to ideal star topologies.
+
 KL.ipynb: Quantifies information-geometric properties of attention distributions, measuring KL divergence reduction when attention sinks are removed.
+
 Fisher.ipynb: Computes the Fisher information matrix to provide a Riemannian metric on probability distributions, calculating layer-wise Fisher norms to quantify information content.
+
 attention_value.ipynb: Examines relationships between attention and geometric transformations through attention entropy, transformation magnitude, and their correlation.
+
 reference_point.ipynb: Measures the influence of reference tokens through relative magnitude, directional guidance, and structural importance via KL divergence.
 
 
