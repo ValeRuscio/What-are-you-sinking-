@@ -1,7 +1,7 @@
 This repository contains the code implementation for our paper "What are you sinking? A geometric approach on attention sink" submitted to NeurIPS 2025. We analyze transformer attention mechanisms through multiple geometric and information-theoretic lenses to understand the formation and structure of reference frames.
  
 
-##Overview
+## Overview
 
 Transformer attention mechanisms develop reference frames that organize the geometric structure of representations. This research investigates these structures through complementary analyses spanning topology, spectral graph theory, and information geometry. We examine both decoder-only models (LLaMA-3.2/3.1, Phi-2, Qwen-2.5, Mistral, Gemma, Pythia) and encoder-only models (BERT, XLM-RoBERTa).
 
@@ -20,7 +20,7 @@ attention_value.ipynb: Examines relationships between attention and geometric tr
 reference_point.ipynb: Measures the influence of reference tokens through relative magnitude, directional guidance, and structural importance via KL divergence.
 
 
-##Data and Hardware
+## Data and Hardware
 
 Our analysis uses a dataset of STEM-focused Wikipedia sentences (mathematics, chemistry, medicine, physics) ranging from 6 to 50 tokens, that is provided in "Data". We processed 500 samples for topology, spectral and Fisher information analysis, 50 samples for KL divergence analysis, and 100 samples for the temporal RMT analysis.
 All experiments were conducted using Google Colab with T4 or A100 GPUs. Some notebooks may take several hours to run, especially for larger models.
